@@ -2,6 +2,10 @@
   opacity: 0.01;
 }
 
+body {
+    font-family: "bigfish";
+}
+
 .example-enter.example-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
