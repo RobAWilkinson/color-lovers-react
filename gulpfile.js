@@ -44,7 +44,7 @@ function buildScript(file, watch) {
 
 // run once
 gulp.task('scripts', function() {
-  return buildScript('App.js', false);
+  return buildScript('app.js', false);
 });
 
 //run nodemon
