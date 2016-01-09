@@ -2,7 +2,7 @@ import PalleteList from './palleteList'
 import React, {Component} from 'react'
 import Selected from './selected'
 import fetch from 'isomorphic-fetch'
-import {render} from 'react-dom';
+import {render} from 'react-dom'
 
 export default class App extends Component {
   constructor (props) {
@@ -20,7 +20,7 @@ export default class App extends Component {
   render () {
     return (
       <div className='container' id='App'>
-        <div className='col-xs-6 tk-bigfish'>
+        <div className='col-xs-6 tk-source-sans-pro' >
           <PalleteList
             handleClick={(pallete) => {
               this.setState({selected: pallete})
