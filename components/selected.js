@@ -3,7 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 export default class Selected extends Component {
   render () {
     if(!this.props.selected){
-      return (<h1> Selected</h1>);
+      return (<div />);
     }
     return(
     <div>
