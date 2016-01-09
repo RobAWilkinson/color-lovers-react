@@ -20,7 +20,7 @@ export default class App extends Component {
   render () {
     return (
       <div className='container' id='App'>
-        <div className='col-xs-6'>
+        <div className='col-xs-6 tk-bigfish'>
           <PalleteList
             handleClick={(pallete) => {
               this.setState({selected: pallete})
