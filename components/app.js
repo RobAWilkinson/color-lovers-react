@@ -5,9 +5,14 @@ import fetch from 'isomorphic-fetch'
 import {render} from 'react-dom'
 
 export default class App extends Component {
+  handleDisplay(e) {
+    console.log('click');
+    e.preventDefault();
+    this.setState({display: true})
+  }
   constructor (props) {
     super(props)
-    this.state = { palletes: [], selected: null }
+    this.state = { display: false, palletes: [], selected: null }
   }
 
   componentDidMount () {
@@ -19,24 +24,54 @@ export default class App extends Component {
   }
   render () {
     var selected;
+    var display;
     if(this.state.selected){
       selected = (
-        <div className='col-xs-6'>
-            <Selected selected={this.state.selected}/>
-        </div>);
+            <Selected selected={this.state.selected}/>);
+    }
+    if(this.state.display) {
+      display = this.state.selected.colors.map(color => <p> {'#' + color}</p>);
+      console.log(display);
     }
     return (
-      <div className='container' id='App'>
-        <div className='col-xs-6 tk-source-sans-pro' >
-          <PalleteList
-            handleClick={(pallete) => {
-              this.setState({selected: pallete})
-            }}
-            palletes={this.state.palletes}
-          />
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 text-center">
+            <h1>colorlovers</h1>
+            <p>Click a color, try it out</p>
+          </div>
         </div>
-          {selected}
+        <div className="row">
+            <div className='col-xs-6 tk-source-sans-pro' >
+              <PalleteList
+                handleClick={(pallete) => {
+                  this.setState({selected: pallete})
+                }}
+                palletes={this.state.palletes}
+              />
+            </div>
+            <div className='col-xs-6'>
+                  {selected}
+            </div>
+        </div>
+        <div className="row" >
+          <div className="col-xs-6" >
+            Thanks for trying it out
+          </div>
+          <div className="col-xs-4">
+            Click 
+            <button 
+              onClick={this.handleDisplay.bind(this)} 
+              className="btn-sm"
+            > 
+              Here
+            </button> to see the CSS colors
+          </div>
+        <div className="row" >
+          {display}
+        </div>
       </div>
+    </div>
     )
   }
 }
