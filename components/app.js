@@ -18,6 +18,13 @@ export default class App extends Component {
       })
   }
   render () {
+    var selected;
+    if(this.state.selected){
+      selected = (
+        <div className='col-xs-6'>
+            <Selected selected={this.state.selected}/>
+        </div>);
+    }
     return (
       <div className='container' id='App'>
         <div className='col-xs-6 tk-source-sans-pro' >
@@ -28,9 +35,7 @@ export default class App extends Component {
             palletes={this.state.palletes}
           />
         </div>
-        <div className='col-xs-6'>
-            <Selected selected={this.state.selected}/>
-        </div>
+          {selected}
       </div>
     )
   }
