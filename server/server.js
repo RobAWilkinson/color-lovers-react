@@ -4,7 +4,7 @@ var app = express();
 var fetch = require('isomorphic-fetch');
 var favicon = require('serve-favicon');
 
-app.use(favicon(path.resolve(__dirname,'../public/favicon.ico')));
+app.use(favicon(path.join(__dirname,'..', 'public', 'favicon.ico')))
 app.use(express.static(path.join(__dirname, './../public')));
 
 

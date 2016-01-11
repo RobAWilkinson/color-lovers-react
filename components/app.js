@@ -56,7 +56,7 @@ export default class App extends Component {
           <div className="col-xs-6" >
             Thanks for trying it out
             <br />
-            made by @robawilkinson
+            made by <a href="http://twitter.com/robawilkinson" >@robawilkinson</a>
           </div>
       </div>
     </div>
