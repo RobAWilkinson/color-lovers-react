@@ -2,8 +2,11 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var fetch = require('isomorphic-fetch');
+var favicon = require('serve-favicon');
 
-app.use(express.static(path.join(__dirname, './../')));
+app.use(favicon(path.resolve(__dirname,'../public/favicon.ico')));
+app.use(express.static(path.join(__dirname, './../public')));
+
 
 app.get('/', function(req,res) {
   res.sendFile('/index.html');

@@ -29,7 +29,7 @@ function buildScript(file, watch) {
     return stream
       .on('error', handleErrors)
       .pipe(source('bundle.js'))
-      .pipe(gulp.dest('./build/'));
+      .pipe(gulp.dest('./public/'));
   }
 
   bundler.on('update', function() {

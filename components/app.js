@@ -6,7 +6,6 @@ import {render} from 'react-dom'
 
 export default class App extends Component {
   handleDisplay(e) {
-    console.log('click');
     e.preventDefault();
     this.setState({display: true})
   }
@@ -31,7 +30,6 @@ export default class App extends Component {
     }
     if(this.state.display) {
       display = this.state.selected.colors.map(color => <p> {'#' + color}</p>);
-      console.log(display);
     }
     return (
       <div className="container">
