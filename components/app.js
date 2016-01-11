@@ -57,19 +57,9 @@ export default class App extends Component {
         <div className="row" >
           <div className="col-xs-6" >
             Thanks for trying it out
+            <br />
+            made by @robawilkinson
           </div>
-          <div className="col-xs-4">
-            Click 
-            <button 
-              onClick={this.handleDisplay.bind(this)} 
-              className="btn-sm"
-            > 
-              Here
-            </button> to see the CSS colors
-          </div>
-        <div className="row" >
-          {display}
-        </div>
       </div>
     </div>
     )
