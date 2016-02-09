@@ -34,14 +34,27 @@ export default class App extends Component {
     if(this.state.palletes.length){
       return (
         <div className="container">
-          <div className="row">
-            <div className="col-xs-12 text-center">
-              <h1>colorlovers</h1>
-              <p>Click a color, try it out</p>
+          <div
+            className="row"
+            style={{marginBottom: 20}}
+          >
+            <div
+              className="col-xs-12 text-center">
+              <h1>
+                Color Lovers
+              </h1>
+              <p>
+                Click on a color scheme title on the left and see what it spins up!
+              </p>
             </div>
           </div>
           <div className="row">
-              <div className='col-xs-6 tk-source-sans-pro' >
+              <div
+                className='
+                  col-xs-4
+                  col-xs-offset-2
+                  tk-source-sans-pro'
+                >
                 <PalleteList
                   handleClick={(pallete) => {
                     this.setState({selected: pallete})
@@ -54,17 +67,23 @@ export default class App extends Component {
               </div>
           </div>
           <div className="row" >
-            <div className="col-xs-6" >
-              Thanks for trying it out
-              <br />
-              made by <a href="http://twitter.com/robawilkinson" >@robawilkinson</a>
+            <div className="col-xs-12 text-center" >
+              <p>
+                Thanks for trying it out
+              </p>
+              <p>
+                made by <a href="http://twitter.com/robawilkinson" >@robawilkinson</a>
+              </p>
             </div>
         </div>
       </div>
       )
     }
     return (
-        <div className="row">
+        <div
+          className="row"
+          style={{marginBottom: 20}}
+        >
           <div className="col-xs-12">
             <img style={{margin: '0 auto'}} src="spinner.gif">
             </img>

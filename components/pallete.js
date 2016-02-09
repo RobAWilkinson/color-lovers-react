@@ -8,7 +8,14 @@ export default class Pallete extends Component {
   }
   render() {
     return (
-      <li onClick={this.handleClick.bind(this)} id='Pallete'>
+      <li
+        onClick={this.handleClick.bind(this)}
+        id='Pallete'
+        style={{
+          marginBottom: 5,
+          fontSize: 18
+        }}
+      >
         {this.props.pallete.title}
       </li>
     )

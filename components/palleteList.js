@@ -13,5 +13,3 @@ export default class PalleteList extends Component {
     )
   }
 }
-
-

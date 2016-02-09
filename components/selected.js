@@ -12,7 +12,7 @@ export default class Selected extends Component {
   }
   drawer() {
         var layer = new paper.Layer()
-        
+
         // Draw a circle in the center
         var width = paper.view.size.width;
         var circles = []
